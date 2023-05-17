@@ -180,5 +180,6 @@ def parse_xml(xml_file):
     
 
 if __name__ == '__main__':
-    parse_xml('oval\oval_com.altx-soft.win_def_81925.xml')
+    for file in os.listdir(os.sep.join([os.getcwd(), 'oval'])):
+        parse_xml(os.sep.join(['oval', file]))
 
